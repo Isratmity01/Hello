@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:layout_weight="3"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+    tools:showIn="@layout/activity_main">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/allid"
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:layout_height="match_parent">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="3dp"
+    android:layout_weight="0.8"
+
+    android:layout_height="0dp">
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        card_view:cardElevation="5dp"
+        card_view:cardUseCompatPadding="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/card_thumbnail_image"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:layout_width="match_parent"
+            android:background="@drawable/live_banner"
+          />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:id="@+id/toptext"
+                android:paddingTop="8dp"
+                android:paddingLeft="10dp"
+                android:drawableLeft="@drawable/ic_trending_up_white_18dp"
+                android:drawablePadding="8dp"
+                android:textColor="@color/text_white"
+                android:text="হ্যালো লাইভ "/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toptext"
+                android:id="@+id/onlineusers"
+                android:textSize="13sp"
+                android:paddingTop="5dp"
+                android:paddingLeft="10dp"
+                android:drawableLeft="@drawable/circleshape"
+                android:drawablePadding="8dp"
+                android:textColor="@color/text_white"
+                android:text="১২১ জন অনলাইনে আছে"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:textSize="14sp"
+                android:paddingTop="20dp"
+                android:paddingBottom="8dp"
+                android:textColor="#ffffff"
+                android:layout_alignParentBottom="true"
+                android:text="জয়েন করুন"
+                />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:layout_gravity="top"
+        android:padding="@dimen/home_spacing"
+        android:layout_weight="2.2"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="#de000000"
+                android:id="@+id/liveuserheader"
+                android:text="লাইভে আছে"
+                />
+            <android.support.v7.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:requiresFadingEdge="horizontal|vertical"
+                android:background="@android:color/transparent"
+                android:divider="@null"
+                android:fadeScrollbars="false"
+                android:layout_below="@id/liveuserheader"
+                android:id="@+id/horizontallayoutholder"
+                android:orientation="horizontal"
+
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingTop="@dimen/home_spacing"
+                android:textSize="17sp"
+                android:textColor="#de000000"
+                android:id="@+id/msgheader"
+                android:text="হ্যালো মেসেজ "
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+            <android.support.v7.widget.RecyclerView
+
+                android:id="@+id/friendListRecyclerView"
+                android:layout_width="match_parent"
+                android:requiresFadingEdge="horizontal|vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                />
+</RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "D:\\Hello\\emojikeyboard\\build\\intermediates\\res\\merged\\debug\\layout\\emojicon_item.xml",
+        "source": "D:\\Hello\\emojikeyboard\\src\\main\\res\\layout\\emojicon_item.xml"
+    },
+    {
+        "merged": "D:\\Hello\\emojikeyboard\\build\\intermediates\\res\\merged\\debug\\layout\\emojicon_grid.xml",
+        "source": "D:\\Hello\\emojikeyboard\\src\\main\\res\\layout\\emojicon_grid.xml"
+    },
+    {
+        "merged": "D:\\Hello\\emojikeyboard\\build\\intermediates\\res\\merged\\debug\\layout\\sticker_grid.xml",
+        "source": "D:\\Hello\\emojikeyboard\\src\\main\\res\\layout\\sticker_grid.xml"
+    },
+    {
+        "merged": "D:\\Hello\\emojikeyboard\\build\\intermediates\\res\\merged\\debug\\layout\\sticker_item.xml",
+        "source": "D:\\Hello\\emojikeyboard\\src\\main\\res\\layout\\sticker_item.xml"
+    },
+    {
+        "merged": "D:\\Hello\\emojikeyboard\\build\\intermediates\\res\\merged\\debug\\layout\\emojicons.xml",
+        "source": "D:\\Hello\\emojikeyboard\\src\\main\\res\\layout\\emojicons.xml"
+    }
+]
