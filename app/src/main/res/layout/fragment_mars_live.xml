@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+ >
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:requiresFadingEdge="horizontal|vertical"
+        android:fadeScrollbars="false"
+        android:id="@+id/horizontallayoutholder"
+        android:orientation="horizontal"
+
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/horizontallayoutholder"
+
+        android:layout_height="match_parent"
+
+       >
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/border_color" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mars_live_chat_view"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:paddingBottom="58dp">
+
+            <Button
+                android:id="@+id/jump_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/shape_jump_to_bottom"
+                android:text="@string/jump_to_latest"
+                android:textAllCaps="false"
+                android:textColor="#FFF" />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="80dp"
+            android:layout_gravity="bottom">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="3"
+                android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2.5"
+            android:layout_height="wrap_content">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+
+
+
+
+                <RelativeLayout
+                    android:id="@+id/msgedittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+
+                    android:background="@drawable/ic_input_background"
+
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin">
+
+
+                    <ImageView
+                        android:id="@+id/emoticon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="15dp"
+
+                       />
+
+                    <github.ankushsachdeva.emojicon.EmojiconEditText
+                        android:id="@+id/messageEditText"
+                        android:layout_width="240dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toEndOf="@+id/emoticon"
+                        android:layout_toRightOf="@+id/emoticon"
+
+                        android:background="@android:color/transparent"
+                        android:hint="@string/hint_write_message"
+                        android:maxWidth="240dp"
+                        android:textColorHint="#AEC3E3"
+                        ads:emojiconSize="28sp" />
+
+
+                    <ImageView
+                        android:id="@+id/send_button"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="15dp"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/ic_attach" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_weight=".5"
+                    android:gravity="center"
+
+
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:background="@drawable/circular_shape"
+                        android:layout_height="50dp">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:paddingLeft="5dp"
+                            android:layout_gravity="center"
+                            android:layout_centerInParent="true"
+                            app:srcCompat="@drawable/ic_send"
+                            />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

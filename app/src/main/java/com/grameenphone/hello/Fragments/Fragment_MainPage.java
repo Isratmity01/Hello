@@ -3,8 +3,11 @@ package com.grameenphone.hello.Fragments;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatDelegate;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -35,6 +38,7 @@ public class Fragment_MainPage extends Fragment {
     private LiveUserListAdapter liveUserListAdapter;
 
     private RoomListAdapter roomListAdapter;
+    private CardView cardView;
     private ArrayList<Integer> userArrayList=new ArrayList<>();
     RecyclerView allusers;
     String [] names = {"Rahim","Arif","Miral","Akhter","Selim","Masum"};
@@ -96,6 +100,18 @@ public class Fragment_MainPage extends Fragment {
 
         userrecylcer=(RecyclerView)view.findViewById(R.id.horizontallayoutholder);
         msgrecyler=(RecyclerView)view.findViewById(R.id.friendListRecyclerView);
+        cardView=(CardView)view.findViewById(R.id.card_view);
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment_Live fragment4 = new Fragment_Live();
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, fragment4);
+                fragmentTransaction.addToBackStack("live");
+                fragmentTransaction.commit();
+            }
+        });
 
     }
 
