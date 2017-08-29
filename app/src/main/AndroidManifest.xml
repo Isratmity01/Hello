@@ -18,7 +18,8 @@
             android:name="com.grameenphone.hello.MainActivity"
             android:label=""
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize|"
+            android:windowSoftInputMode="adjustResize"
+
 
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

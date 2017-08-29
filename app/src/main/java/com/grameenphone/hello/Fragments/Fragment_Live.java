@@ -389,7 +389,6 @@ private View fragmentView;
     }
     public void init()
     {
-        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN | WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
 
         userArrayList2.clear();
